@@ -1,7 +1,6 @@
 ---
-title: "Tint Is Not Tufte"
-subtitle: "An implementation in R Markdown"
-author: "JJ Allaire, Yihui Xie, Dirk Eddelbuettel"
+title: "How to perform analyses in the light of ASA’s recent statement on p-values"
+author: "Matthew Loop"
 date: "`r Sys.Date()`"
 output: tint::tintHtml
 bibliography: skeleton.bib
@@ -41,6 +40,7 @@ So statisticians are telling me I'm wrong...again! What am I supposed to do?
 
 
 # 3 recommendations for what to do
+`r margin_note("Most of my opinions about this and how I've changed in my interpretations of p-values have to do with the thoughts of [Frank Harrell](https://www.fharrell.com/post/) and [Andrew Gelman](https://statmodeling.stat.columbia.edu). I've borrowed heavily from them, and I highly recommend that you do the same.")`
 
 ## 1. Talk about risk/odds/hazard ratios that are consistent with the data
 
@@ -56,6 +56,12 @@ So statisticians are telling me I'm wrong...again! What am I supposed to do?
 # How to do it
 
 ## Rewriting a results section
+```{r, fig.margin = TRUE, echo=FALSE}
+knitr::include_graphics("figure.png")
+```
+
+*Of the total sample ($n=20,150$), 1,633 participants (8%) were classified as cognitively impaired at their most recent follow-up. Table 5 shows the odds ratios and approximate 95% Wald’s confidence intervals for a 10 µg/m3 change in PM$_{2.5}$ for each of the four models, both for the main analysis (impaired on the most recent assessment) and sensitivity analysis (impaired on both of the two most recent assessments). Model 1 indicated that there was no association between PM2.5 and the odds of incident cognitive impairment. The odds ratio decreased sharply after demographics were added (model 2), with an odds ratio close to 1. This estimated odds ratio was more or less constant for models 3 and 4.*
+
 
 ## Responding to a journal reviewer
 
