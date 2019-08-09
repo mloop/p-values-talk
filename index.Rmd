@@ -36,16 +36,18 @@ Why did the ASA make this recommendation? Well, earlier in the editorial they me
 > * Don’t believe that your p-value gives the probability that chance alone produced the observed association or effect or the probability that your test hypothesis is true.  
 > * Don’t conclude anything about scientific or practical importance based on statistical significance (or lack thereof)
 
+
 # The problem
 
-![](https://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwityqKezfbjAhUCUt8KHROcCqsQjRx6BAgBEAQ&url=https%3A%2F%2Fgiphy.com%2Fexplore%2Fare-you-serious&psig=AOvVaw2QfMmwrPf3ukLk4432D1UH&ust=1565468089647462)
+![](https://media.giphy.com/media/l2SpLQgNpVORsiqVW/giphy.gif)
+
 So statisticians are telling me I'm wrong...again! What am I supposed to do?
 
 > Don’t. Don’t. Just...don’t. Yes, we talk a lot about don’ts. The ASA Statement on p-Values and Statistical Significance (Wasserstein and Lazar 2016) was developed primarily because after decades, warnings about the don’ts had gone mostly unheeded. The statement was about what not to do, because there is widespread agreement about the don’ts. Knowing what not to do with p-values is indeed necessary, but it does not suffice. It is as though statisticians were asking users of statistics to tear out the beams and struts holding up the edifice of modern scientific research without offering solid construction materials to replace them. Pointing out old, rotting timbers was a good start, but now we need more.
 
 # My background
 
-* Background in Biology, but PhD in Biostatistcs and work as an applied statistician
+* Background in Biology, but PhD in Biostatistics and work as an applied statistician
 * Served as both lead author and collaborating statistician on applied papers
 * I've said "statistically significant" about p-values quite a lot
 
@@ -93,9 +95,19 @@ Science isn't that simple, and we know it. A treatment is never "definitely help
 knitr::include_graphics("figure.png")
 ```
 
-*Of the total sample ($n=20,150$), 1,633 participants (8%) were classified as cognitively impaired at their most recent follow-up. Table 5 shows the odds ratios and approximate 95% Wald’s confidence intervals for a 10 µg/m3 change in PM$_{2.5}$ for each of the four models, both for the main analysis (impaired on the most recent assessment) and sensitivity analysis (impaired on both of the two most recent assessments). Model 1 indicated that there was no association between PM2.5 and the odds of incident cognitive impairment. The odds ratio decreased sharply after demographics were added (model 2), with an odds ratio close to 1. This estimated odds ratio was more or less constant for models 3 and 4.*
+> Of the total sample ($n=20,150$), 1,633 participants (8%) were classified as cognitively impaired at their most recent follow-up. Table 5 shows the odds ratios and approximate 95% Wald’s confidence intervals for a 10 µg/m3 change in PM$_{2.5}$ for each of the four models, both for the main analysis (impaired on the most recent assessment) and sensitivity analysis (impaired on both of the two most recent assessments). Model 1 indicated that there was no association between PM2.5 and the odds of incident cognitive impairment. The odds ratio decreased sharply after demographics were added (model 2), with an odds ratio close to 1. This estimated odds ratio was more or less constant for models 3 and 4.*
+
+So this obviously violates the ASA's current feelings on p values. Here is what I would do if I were writing this up today:
+
+> Model 1 suggested that a 10 $\mu$g/m$^3$ higher annual average exposure to PM$_{2.5}$ was associated with an approximately 25% higher odds of cognitive impairment. However, this interval included implausiblly high odds ratios, as well as some odds ratios that would indicate an association with lower odds of cognitive impairment among those with higher exposure to PM$_{2.5}$. After adjustment for additional potential confounders, the odds of cognitive impairment were very similar between someone with a, say, 15 $\mu$g/m$^3$ vs. a 5 $\mu$g/m$^3$ annual average exposure to PM$_{2.5}$. The confidence intervals also indicated the data was consistent with large negative and positive associations between PM$_{2.5}$ exposure and cognitive impairment. Therefore, it is difficult to make any confident statements about the relationship, based upon our data.
+
+If I had been interpreting the results this way, I may have looked deeper into the variability in the measurement of air pollution we were using, and potentially try to model it in order to create a better model. I might have investigated more who we were doing a poor job of predicting their likelihood of having cognitive impairment. Instead, I made the classic mistake of equating "nonsignificant" with "nonexistent", and in the first model "significant" with "real."^[I also recognize that it's easy for me to give a critical review of the data like this now that it's published. I already have credit for it and am not worried about it being rejected because I'm taking such a cautious approach. I'm trying to do better.]
 
 
 ## Responding to a journal reviewer
+
+I haven't encountered a belligerent reviewer yet on this issue, but I'm sure I will. Let's say you follow the advice above, and you get the following review.
+
+> The authors show no classic statistical evidence for their claims. P values and hypothesis testing have served as the cornerstone of Science for 100 years. It's how we approve drugs. Therefore, it's difficult to ascertain the strength of the authors' findings without them assigning a predetermined type 1 error rate to their p values. How do we know to trust the effect or not? Is the signal greater than the noise? 
 
 # How the world could be different
