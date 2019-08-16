@@ -53,18 +53,46 @@ class: inverse, center, middle
 # Let's give some context...
 
 ---
-# Previous ASA recommendations in 2016
+
+
+
+.center[
+```{r, out.height='400px'}
+knitr::include_graphics("p_value_ban.png")
+```
+]
+
+P-values banned in *Basic and Applied Social Psychology* in 2015  
+
+
+
+---
+ASA reacted by creating a statement on the use of p-values in 2016.
+```{r}
+knitr::include_graphics("asa_2016.png")
+```
+
+.footnote[Wasserstein RL, Lazar NA, Others. The ASA’s statement on p-values: context, process, and purpose. Am Stat. stat.berkeley.edu; 2016;70:129–33.]
+
+---
+
+Summary of recommendations (from 2019 paper):
 
 > * Don’t base your conclusions solely on whether an association or effect was found to be “statistically significant” (i.e., the p-value passed some arbitrary threshold such as $p < 0.05$).  
 > * Don’t believe that an association or effect exists just because it was statistically significant.  
 > * Don’t believe that an association or effect is absent just because it was not statistically significant.  
 > * Don’t believe that your p-value gives the probability that chance alone produced the observed association or effect or the probability that your test hypothesis is true.  
 > * Don’t conclude anything about scientific or practical importance based on statistical significance (or lack thereof)
-> 
-> `r tint::quote_footer('--- Ron Wasserstein, Allen Schirm, and Nicole Lazar')`
+
 ---
 
+# Symposium on Statistical Inference
 
+* ASA called a meeting in 2017, capped at 200 people to encourage discussion
+* Some speakers were invited to submit a paper based on their talk at this conference
+* Editors of *The American Statistician* chose which to include, resulting in the issue proclaiming that "statistically significant" should no longer be used
+
+---
 
 # So statisticians are telling me I'm wrong...again! Jerks.
 
