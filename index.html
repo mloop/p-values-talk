@@ -4,7 +4,6 @@
     <title>How to perform analyses in the light of ASA’s recent statement on p-values</title>
     <meta charset="utf-8" />
     <meta name="author" content="Matthew Loop" />
-    <meta name="date" content="2019-08-16" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
   </head>
   <body>
@@ -14,7 +13,7 @@ class: center, middle, inverse, title-slide
 # How to perform analyses in the light of ASA’s recent statement on p-values
 ### Matthew Loop
 ### UNC Chapel Hill
-### 2019-08-16
+### August 20th, 2019
 
 ---
 
@@ -23,21 +22,28 @@ class: center, middle, inverse, title-slide
 
 
 
-# An inconvenient statement
 
-The American Statistical Association (ASA) released a statement in March urging the scientific community to abandon the use of the phrase "statistically significant." Specifically, it said, 
 
 &gt; We conclude, based on our review of the articles in this special issue and the broader literature, that it is time to stop using the term “statistically significant” entirely. Nor should variants such as “significantly different,” “p &lt; 0.05,” and “nonsignificant” survive, whether expressed in words, by asterisks in a table, or in some other way.
 &gt; 
-&gt; &lt;footer&gt;--- Ron Wasserstein, Allen Schirm, and Nicole Lazar&lt;/footer&gt;
+&gt; Ron Wasserstein, Allen Schirm, and Nicole Lazar, *The American Statistician*, 2019
+
+.footnote[
+Wasserstein RL, Schirm AL, Lazar NA. Moving to a World Beyond “p &lt; 0.05.” *Am Stat.* Taylor &amp; Francis; 2019;73:1–19.; 
+]
+
+---
+background-image: url("https://media.giphy.com/media/l2SpLQgNpVORsiqVW/giphy.gif")
+background-size: cover
+background-position: center
 
 ---
 
-# "Seriously?!" said all the scientists
+# Summary of today's presentation
 
-.center[
-![](https://media.giphy.com/media/l2SpLQgNpVORsiqVW/giphy.gif)
-]
+1. ASA 2016 Statement: what *not* to do with p-values
+2. 2019 Editorial, special issue of *The American Statistician*: what *to do*
+3. Rewriting a results section/responding to a reviewer
 
 ---
 
@@ -46,16 +52,48 @@ class: inverse, center, middle
 # Let's give some context...
 
 ---
+# Previous warnings
+
+* 1966: Bakan D. The test of significance in psychological research. *Psychol Bull*  
+* 1988: Evans SJ, Mills P, Dawson J. The end of the p value? *Br Heart J*  
+* 1995: Altman DG, Martin Bland J. Statistics notes: Absence of evidence is not evidence of absence. *BMJ*  
+* 2016: Greenland S, Senn SJ, Rothman KJ, Carlin JB, Poole C, Goodman SN, et al. Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. *Eur J Epidemiol*  
+
+---
+
+# Previous warnings
+
+* 1966: Bakan D. The test of significance in psychological research. *Psychol Bull*  
+* .red[1988]: Evans SJ, Mills P, Dawson J. .red[The end of the p value?] *Br Heart J*  
+* 1995: Altman DG, Martin Bland J. Statistics notes: Absence of evidence is not evidence of absence. *BMJ*  
+* 2016: Greenland S, Senn SJ, Rothman KJ, Carlin JB, Poole C, Goodman SN, et al. Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. *Eur J Epidemiol*
 
 
+---
+# Example incorrect interpretations
+
+1. If you reject the test hypothesis because `\(p \le 0.05\)`, the chance you are in error is 5%.
+2. A significant test result means that the test hypothesis is false or should be rejected.
+3. A large p value is evidence in favor of the test hypothesis.
+4. If two confidence intervals overlap, the difference between two estimates or studies is not significant.
+
+
+.footnote[Greenland S, Senn SJ, Rothman KJ, Carlin JB, Poole C, Goodman SN, et al. Statistical tests, P values, confidence intervals, and power: a guide to misinterpretations. Eur J Epidemiol. Springer; 2016;31:337–50.]
+
+---
+class: inverse, middle, center
+
+## Statistics as a profession had refrained from any official statements
+
+---
+
+## Then this happened
 
 .center[
-&lt;img src="p_value_ban.png" height="400px" /&gt;
+&lt;img src="p_value_ban.png" height="300px" /&gt;
 ]
 
-P-values banned in *Basic and Applied Social Psychology* in 2015  
-
-
+P-values banned in *Basic and Applied Social Psychology* in 2015 (and confidence intervals, too)
 
 ---
 ASA reacted by creating a statement on the use of p-values in 2016.
@@ -131,32 +169,6 @@ Summary of recommendations (from 2019 paper):
 3. your statistics/results/discussion sections appropriately reflect your Scientific uncertainty
 
 ---
-# Resources that have helped me
-
-.pull-left[
-&lt;img src="http://www.stat.columbia.edu/~gelman/arm/cover.gif" height="350px" /&gt;
-]
-
-
-.pull-right[
-&lt;img src="https://xcelab.net/rm/wp-content/uploads/2012/01/9781482253443.jpg" height="350px" /&gt;
-]
-
----
-
-# Resources that have helped me
-
-.pull-left[
-![](http://www.stat.columbia.edu/~gelman/me_2016.jpg)
-
-[Andrew Gelman's Blog](https://statmodeling.stat.columbia.edu)
-]
-
-.pull-right[
-![](https://www.vumc.org/biostatistics/sites/vumc.org.biostatistics/files/people/FrankHarrell.jpg)
-
-[Frank Harrell's Blog](https://www.fharrell.com/post/)
-]
 
 ---
 
@@ -254,15 +266,15 @@ My Master's paper was titled, ["Fine particulate matter and incident cognitive i
 ![](figure.png)&lt;!-- --&gt;
 ---
 
-And the text that accompanied it:
-
-"Of the total sample (n=20,150), 1,633 participants (8%) were classified as cognitively impaired at their most recent follow-up. Table 5 shows the odds ratios and approximate 95% Wald’s confidence intervals for a 10 µg/m3 change in PM2.5 for each of the four models, both for the main analysis (impaired on the most recent assessment) and sensitivity analysis (impaired on both of the two most recent assessments). Model 1 indicated that there was no association between PM2.5 and the odds of incident cognitive impairment. The odds ratio decreased sharply after demographics were added (model 2), with an odds ratio close to 1. This estimated odds ratio was more or less constant for models 3 and 4."
+&gt; Model 1 indicated that there was no association between PM2.5 and the odds of incident cognitive impairment. The odds ratio decreased sharply after demographics were added (model 2), with an odds ratio close to 1. This estimated odds ratio was more or less constant for models 3 and 4.
 
 ---
 
-So my writing obviously violated the ASA's current feelings on p values. Here is what I would do if I were writing this up today:
+## So my writing obviously violated the ASA's current feelings on p values. Here is what I would do if I were writing this up today...
 
-"Model 1 suggested that a 10 µg/m3 higher annual average exposure to PM2.5 was associated with an approximately 25% higher odds of cognitive impairment. However, this interval included implausiblly high odds ratios, as well as some odds ratios that would indicate an association with lower odds of cognitive impairment among those with higher exposure to PM2.5. After adjustment for additional potential confounders, the odds of cognitive impairment were very similar between someone with a, say, 15 µg/m3 vs. a 5 µg/m3 annual average exposure to PM2.5. The confidence intervals also indicated the data was consistent with large negative and positive associations between PM2.5 exposure and cognitive impairment. Therefore, it is difficult to make any confident statements about the relationship, based upon our data."
+---
+
+&gt; Model 1 suggested that a 10 µg/m3 higher annual average exposure to PM2.5 was associated with an approximately 25% higher odds of cognitive impairment. After adjustment for additional potential confounders, the odds of cognitive impairment were very similar between someone with a, say, 15 µg/m3 vs. a 5 µg/m3 annual average exposure to PM2.5. However, the confidence intervals also indicated the data was consistent with large negative and positive associations between PM2.5 exposure and cognitive impairment. Therefore, it is difficult to make any confident statements about the relationship, based upon our data."
 
 ---
 
@@ -305,6 +317,35 @@ Here's what my response might look like
 ![](nejm.png)&lt;!-- --&gt;
 
 A small step, but now does not allow p-values for unplanned comparisons with no prespecified method of type 1 error correction
+
+---
+
+# Resources that have helped me
+
+.pull-left[
+&lt;img src="http://www.stat.columbia.edu/~gelman/arm/cover.gif" height="350px" /&gt;
+]
+
+
+.pull-right[
+&lt;img src="https://xcelab.net/rm/wp-content/uploads/2012/01/9781482253443.jpg" height="350px" /&gt;
+]
+
+---
+
+# Resources that have helped me
+
+.pull-left[
+![](http://www.stat.columbia.edu/~gelman/me_2016.jpg)
+
+[Andrew Gelman's Blog](https://statmodeling.stat.columbia.edu)
+]
+
+.pull-right[
+![](https://www.vumc.org/biostatistics/sites/vumc.org.biostatistics/files/people/FrankHarrell.jpg)
+
+[Frank Harrell's Blog](https://www.fharrell.com/post/)
+]
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>

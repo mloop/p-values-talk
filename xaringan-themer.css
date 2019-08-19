@@ -33,7 +33,7 @@ h1, h2, h3 {
 }
 .remark-slide-content {
   background-color: #FFF;
-  font-size: 25px;
+  font-size: 35px;
   
   
   
@@ -75,7 +75,7 @@ a, a > code {
   position: absolute;
   bottom: 3em;
   padding-right: 4em;
-  font-size: 0.7em;
+  font-size: 0.35em;
 }
 .remark-code-line-highlighted {
   background-color: rgba(255,255,0,0.5);
@@ -172,4 +172,10 @@ table.dataTable.hover tbody tr:hover, table.dataTable.display tbody tr:hover {
     top: 0 !important;
     left: 0 !important;
   }
+}
+
+
+/* Extra CSS */
+.red {
+  color: red;
 }
